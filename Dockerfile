@@ -31,6 +31,16 @@ RUN a2enmod rewrite
 
 
 #
+# - - - - - - - - - - final-image - - - - - - - - - -
+#
+
+FROM base AS final-image
+
+COPY tmp/build/* /var/www/html/
+
+
+
+#
 # - - - - - - - - - - development - - - - - - - - - -
 #
 
